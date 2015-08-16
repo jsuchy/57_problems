@@ -1,6 +1,12 @@
 defmodule Problem_2 do
   def count do
-    word = IO.gets "Please enter a word: "
-    IO.puts "#{word} has #{to_string String.length word} characters"
+    "Please enter a word: "
+    |> IO.gets
+    |> output
+    |> IO.puts
+  end
+
+  defp output(word) do
+    "#{word} has #{to_string String.length word} characters"
   end
 end
